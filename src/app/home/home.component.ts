@@ -43,10 +43,14 @@ export class HomeComponent implements OnInit {
   }
 
   addItem() {
+    if (this.goalText !== '') {
     this.goals.push(this.goalText);
     this.goalText = '';
     this.itemCount = this.goals.length;
     this._data.changeGoal(this.goals);
+    } else {
+      alert('Your goal cannot be empty');
+    }
   }
   removeItem(i) {
     this.goals.splice(i, 1);
