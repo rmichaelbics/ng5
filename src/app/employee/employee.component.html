@@ -8,16 +8,18 @@
 
 <div *ngIf="showDetails.checked">Show Details..</div>
 
-
+<br>
+<br>
+<br>
 <mat-radio-group value="1">
   <mat-radio-button value="1">Male</mat-radio-button>
   <mat-radio-button value="0" [checked]="isChecked">Female</mat-radio-button>
 </mat-radio-group>
-
-<select>
+<br>
+<!-- <select>
   <option *ngFor="let color of colors" 
    [value]="color.id">{{color.name}}</option>
-</select>
+</select> -->
 <br>
 <mat-form-field>
   <mat-select [(value)]="selected">
@@ -39,3 +41,28 @@
     <textarea matInput placeholder="Leave a comment"></textarea>
   </mat-form-field>
 </form>
+
+<br>
+<mat-form-field class="example-full-width">
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker touchUi="true" #picker></mat-datepicker>
+</mat-form-field>
+
+<br>
+<mat-form-field>
+  <input matInput [matDatepicker]="dp" placeholder="Different locale">
+  <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+  <mat-datepicker #dp></mat-datepicker>
+</mat-form-field>
+
+<br>
+<mat-slider></mat-slider>
+
+<br>
+
+<mat-slide-toggle>Slide me!</mat-slide-toggle>
+
+
+<br>
+
