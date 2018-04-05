@@ -9,7 +9,8 @@ import { AppRoutingModule } from './app.routing.module';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { EmployeeComponent } from './employee/employee.component';
-
+import { MaterialModule } from './material.module';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EmployeeComponent } from './employee/employee.component';
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

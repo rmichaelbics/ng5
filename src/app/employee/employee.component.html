@@ -1,3 +1,41 @@
-<p>
-  employee works!
-</p>
+
+<mat-checkbox 
+#showDetails
+[value]=""
+[checked]="isChecked"
+(change)="onChange($event)"
+>Subscribe to my website</mat-checkbox>
+
+<div *ngIf="showDetails.checked">Show Details..</div>
+
+
+<mat-radio-group value="1">
+  <mat-radio-button value="1">Male</mat-radio-button>
+  <mat-radio-button value="0" [checked]="isChecked">Female</mat-radio-button>
+</mat-radio-group>
+
+<select>
+  <option *ngFor="let color of colors" 
+   [value]="color.id">{{color.name}}</option>
+</select>
+<br>
+<mat-form-field>
+  <mat-select [(value)]="selected">
+    <mat-option *ngFor="let color of colors"
+    [value]="color.id">{{color.name}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<p>You selected: {{selected}} {{selectedText}}</p>
+
+<br>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Favorite food" value="" required class="form-control">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Leave a comment"></textarea>
+  </mat-form-field>
+</form>
