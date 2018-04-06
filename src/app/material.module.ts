@@ -12,14 +12,16 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {CdkTableModule} from '@angular/cdk/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule ({
     imports: [MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatRadioModule, MatSlideToggleModule,
         MatSelectModule, MatInputModule, MatNativeDateModule, MatSliderModule, MatPaginatorModule,
-        MatSortModule, CdkTableModule, MatTableModule],
+        MatSortModule, CdkTableModule, MatTableModule, MatCardModule, MatGridListModule],
     exports: [MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatRadioModule, MatSlideToggleModule,
          MatSelectModule, MatInputModule, MatNativeDateModule, MatSliderModule,
-         MatPaginatorModule, MatSortModule, CdkTableModule, MatTableModule]
+         MatPaginatorModule, MatSortModule, CdkTableModule, MatTableModule, MatCardModule, MatGridListModule]
 })
 
 export class MaterialModule { }
