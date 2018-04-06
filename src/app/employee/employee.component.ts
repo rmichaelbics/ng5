@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-
+import {Sort} from '@angular/material/sort';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
 // import { CdkTableModule} from '@angular/cdk/table';
 // import { Observable } from 'rxjs/Observable';
