@@ -8,14 +8,18 @@ import {MatInputModule} from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-
-// import {MatPaginator, MatTableDataSource} from '@angular/material';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {CdkTableModule} from '@angular/cdk/table';
+import {MatSortModule} from '@angular/material/sort';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule ({
     imports: [MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatRadioModule, MatSlideToggleModule,
-        MatSelectModule, MatInputModule, MatNativeDateModule, MatSliderModule],
+        MatSelectModule, MatInputModule, MatNativeDateModule, MatSliderModule, MatPaginatorModule,
+        MatSortModule, CdkTableModule, MatTableModule],
     exports: [MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatRadioModule, MatSlideToggleModule,
-         MatSelectModule, MatInputModule, MatNativeDateModule, MatSliderModule]
+         MatSelectModule, MatInputModule, MatNativeDateModule, MatSliderModule,
+         MatPaginatorModule, MatSortModule, CdkTableModule, MatTableModule]
 })
 
 export class MaterialModule { }
