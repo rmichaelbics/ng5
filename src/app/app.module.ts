@@ -11,13 +11,15 @@ import { AboutComponent } from './about/about.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { MaterialModule } from './material.module';
 import 'hammerjs';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
