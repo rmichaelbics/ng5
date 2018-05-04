@@ -32,15 +32,50 @@
 
 <br>
 
-<form class="example-form">
-  <mat-form-field class="example-full-width">
+<!-- <form [formGroup]="newHeroForm" #form="ngForm" (ngSubmit)="createNewHero(newHeroForm.value)"> -->
+  <!-- <mat-form-field class="example-full-width">
     <input matInput placeholder="Favorite food" value="" required class="form-control">
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
     <textarea matInput placeholder="Leave a comment"></textarea>
-  </mat-form-field>
-</form>
+  </mat-form-field> -->
+  <!-- <mat-input-container class="input-container">
+    <input matInput type="text"
+           placeholder="{{'name' | translate}}"
+           formControlName="name">
+</mat-input-container>
+
+<mat-input-container class="input-container">
+    <input matInput type="text"
+           placeholder="{{'realName' | translate}}"
+           formControlName="alterEgo">
+</mat-input-container>
+
+<button mat-raised-button type="submit" [disabled]="!newHeroForm.valid">
+    {{'create' | translate}}
+</button>
+
+<div *ngIf="error">{{error | translate}}</div> -->
+
+  <!-- <mat-input-container>
+    <input matInput type="text" placeholder="Id" value="0" required formControlName="id" class="form-control">
+  </mat-input-container>
+
+  <mat-input-container>
+    <input matInput type="text" placeholder="Name" value="" required formControlName="name" class="form-control">
+  </mat-input-container>
+
+  <mat-input-container>
+    <input matInput type="text" placeholder="AlterEgo" value="" required  formControlName="alterEgo" class="form-control">
+  </mat-input-container>
+  <mat-input-container>
+      <input matInput type="text" placeholder="Like count" value="" required formControlName="likes" class="form-control">
+  </mat-input-container>
+  <mat-input-container>
+      <input type="submit" value="Submit">
+  </mat-input-container> -->
+<!-- </form> -->
 
 <br>
 <mat-form-field class="example-full-width">
@@ -151,5 +186,14 @@
     </mat-grid-tile>
   </mat-grid-list>
   
+  <br>
 
-  
+
+  <div class="button-row">
+    <button mat-raised-button>Basic</button>
+    <button mat-raised-button color="primary" (click)="getEmployee()">Primary</button>
+    <button mat-raised-button color="accent">Accent</button>
+    <button mat-raised-button color="warn">Warn</button>
+    <button mat-raised-button disabled>Disabled</button>
+    <a mat-raised-button routerLink=".">Link</a>
+  </div>

@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { DataService, Hero } from '../data.service';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-employee',
@@ -10,8 +12,13 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 export class EmployeeComponent implements OnInit {
 
   isChecked = false;
-  constructor() { }
+  error: string;
+  //
+  heroes: Hero[];
+  constructor(private data: DataService) { }
   selected = 'Yellow';
+
+  heros: Hero[];
 
 
   tiles = [
@@ -35,7 +42,8 @@ export class EmployeeComponent implements OnInit {
     dataSource = new MatTableDataSource(ELEMENT_DATA);
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
-
+    @ViewChild('form') myNgForm; // just to call resetForm method
+    // tslint:disable-next-line:use-life-cycle-interface
     ngAfterViewInit() {
        this.dataSource.paginator = this.paginator;
       // this.dataSource.sort = this.sort;
@@ -44,6 +52,16 @@ export class EmployeeComponent implements OnInit {
   ngOnInit()  {
     // this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+
+    this.data.getAllHeros().subscribe((res) => {
+      this.heros = res;
+    });
+
+    this.data.getAllHeros().subscribe((heroes: Array<Hero>) => {
+           console.log( this.heros = heroes.sort((a, b) => {
+            return a.id - b.id;
+        }));
+     });
   }
 
 
@@ -55,6 +73,24 @@ export class EmployeeComponent implements OnInit {
   onChange($event) {
     console.log($event);
   }
+
+  getEmployee() {
+    console.log(this.data.getAllHeros());
+    console.log(this.data.getAllHeros().subscribe(res => this.heros = res));
+
+    // alert('Michael R');
+  }
+
+  // createNewHero(newHero: Hero) {
+  //   this.data.createHero(newHero).subscribe((newHeroWithId) => {
+  //     this.heroes.push(newHeroWithId);
+  //     this.myNgForm.resetForm();
+  //   }, (response: Response) => {
+  //     if (response.status === 500) {
+  //       this.error = 'errorHasOcurred';
+  //     }
+  //   });
+  // }
 }
 
 function compare(a, b, isAsc) {

@@ -12,6 +12,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { MaterialModule } from './material.module';
 import 'hammerjs';
 import { UserComponent } from './user/user.component';
+import {HttpClientModule} from '@angular/common/http';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { UserComponent } from './user/user.component';
     FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule, HttpClientModule, HttpModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
