@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/IonixxDevOps/WindowsWebApp/_apis/build/status/rmichaelbics.ng5)](https://dev.azure.com/IonixxDevOps/WindowsWebApp/_build/latest?definitionId=5)
+[![Build Status](https://dev.azure.com/IonixxDevOps/DotNetCore/_apis/build/status/rmichaelbics.ng5)](https://dev.azure.com/IonixxDevOps/DotNetCore/_build/latest?definitionId=6)
 
 # Ng5
 
