@@ -16,6 +16,7 @@ steps:
     
 - script: |
     docker build -t $(dockerId)/$(imageName) .  # add options to this command to meet your needs
+     docker push $(dockerId)/$(imageName)
     npm install
     npm run build
   displayName: 'npm install and build'
