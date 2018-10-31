@@ -12,12 +12,7 @@ steps:
     versionSpec: '8.x'
   displayName: 'Install Node.js',
 
-  - task: Docker@1
-  displayName: 'Push an image'
-  inputs:
-    azureSubscriptionEndpoint: 'ContosoAzureSubscription'
-    azureContainerRegistry: contoso.azurecr.io
-    command: 'push'
+
     
 - script: |
     docker build -t $(dockerId)/$(imageName) .  # add options to this command to meet your needs
