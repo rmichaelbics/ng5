@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/IonixxDevOps/WindowsWebApp/_apis/build/status/rmichaelbics.ng5)](https://dev.azure.com/IonixxDevOps/WindowsWebApp/_build/latest?definitionId=5)
+
 # Ng5
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
