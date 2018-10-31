@@ -13,9 +13,9 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    docker build -t $(dockerId)/$(imageName) .  # add options to this command to meet your needs
     npm install
     npm run build
-    docker build -t $(dockerId)/$(imageName) .  # add options to this command to meet your needs
   displayName: 'npm install and build'
   
 
