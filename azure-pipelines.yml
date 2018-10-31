@@ -12,6 +12,7 @@ steps:
     versionSpec: '8.x'
   displayName: 'Install Node.js'
 
+- script: docker build -t $(dockerId)/$(imageName) .  # add options to this command to meet your needs
 - script: |
     npm install
     npm run build
